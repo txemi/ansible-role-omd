@@ -29,13 +29,13 @@
 - set_fact:
     omd_version: "{{ omd_version_cache.stdout_lines[0] }}"
 
-- name: symlink /etc/init.d/omd
-  file: 
-    src: "/etc/init.d/omd-{{ omd_version }}"
-    dest: /etc/init.d/omd
-    owner: root
-    group: root
-    state: link
-  become: true
+#- name: symlink /etc/init.d/omd
+#  file: 
+#    src: "/etc/init.d/omd-{{ omd_version }}"
+#    dest: /etc/init.d/omd
+#    owner: root
+#    group: root
+#    state: link
+#  become: true
 
 

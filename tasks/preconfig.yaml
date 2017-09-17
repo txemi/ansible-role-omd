@@ -16,8 +16,10 @@
   failed_when: false
 
 - name: create site {{ omd_site }}
+  #shell: >
+  #  omd create -u {{ omd_user_id }} -g {{ omd_group_id }} {{ omd_site }}
   shell: >
-    omd create -u {{ omd_user_id }} -g {{ omd_group_id }} {{ omd_site }}
+    omd create {{ omd_site }}
   when: omd_site_output.rc == 1
   become: true
 

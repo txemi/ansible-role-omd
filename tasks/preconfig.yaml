@@ -21,6 +21,7 @@
   shell: >
     omd create {{ omd_site }}
   when: omd_site_output.rc == 1
+  notify: restart omd
   become: true
 
 #- name: disable all OMD config parts 
